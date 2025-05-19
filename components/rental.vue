@@ -1,6 +1,15 @@
 <script setup>
 const props = defineProps(["model"]);
-const rental = props.model;
+const { categories } = useRentals();
+const rental = {
+  id: props.model.id,
+  owner: props.model.owner,
+  type: categories.includes(props.model.category) ? "Community" : "Standalone",
+  city: props.model.city,
+  bedrooms: props.model.bedrooms,
+  image: props.model.image,
+  title: props.model.title,
+};
 </script>
 
 <template>

@@ -3,7 +3,8 @@ import { useRentals } from "@/composables/useRentals";
 const route = useRoute();
 const id = route.params.id;
 const { findBy, categories } = useRentals();
-const model = findBy(id);const { title, owner, city, category, bedrooms, description, image } = model.attributes;
+const model = findBy(id);
+const { title, owner, city, category, bedrooms, description, image } = model.attributes;
 const rental = {
   id: id,
   owner: owner,
