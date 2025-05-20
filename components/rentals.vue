@@ -1,22 +1,6 @@
 <script setup>
-// import { useRentals } from "@/composables/useRentals";
-// const { model } = useRentals();
-
-const props = defineProps(['model'])
-const rentals = props.model.map((rental) => {
-  const id = rental.id
-  const { title, owner, city, category, bedrooms, description, image } = rental.attributes
-  return {
-    id,
-    title,
-    owner,
-    city,
-    category,
-    bedrooms,
-    description,
-    image,
-  }
-})
+const props = defineProps(["model"]);
+const rentals = props.model;
 </script>
 
 <template>
